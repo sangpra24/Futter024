@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 
 class ServiceAPI {
   static final Dio _dio = Dio(BaseOptions(
-    baseUrl: "https://bd50-49-231-253-51.ap.ngrok.io/api/",
+    baseUrl: "https://b5a2-49-231-253-51.ap.ngrok.io/api/",
     headers: {'Content-Type': 'application/json; charset=UTF-8'},
   ));
 
