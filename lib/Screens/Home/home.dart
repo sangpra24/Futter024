@@ -75,8 +75,9 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: const Text("เเสดง user ทั้งหมด"),
-        backgroundColor: Color.fromARGB(255, 172, 25, 198),
+        title: const Text("Futter App"),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(255, 255, 31, 91),
         actions: [
           IconButton(
             icon: const Icon(Icons.person_add),
@@ -161,7 +162,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body: Container(
+         body: Container(
         child: ListView.builder(
           padding: const EdgeInsets.all(8),
           itemCount: datalist.length,
@@ -173,6 +174,11 @@ class _HomeScreenState extends State<HomeScreen> {
           },
         ),
       ),
+        
+
+
+
+
     );
   }
 }

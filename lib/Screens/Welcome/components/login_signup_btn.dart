@@ -26,7 +26,8 @@ class LoginAndSignupBtn extends StatelessWidget {
             );
           },
           child: Text(
-            "Login".toUpperCase(),
+            "เข้าสู่ระบบ".toUpperCase(),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20 , color: Color.fromARGB(255, 255, 255, 255)),
           ),
         ),
       ),

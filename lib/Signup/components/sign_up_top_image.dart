@@ -13,8 +13,8 @@ class SignUpScreenTopImage extends StatelessWidget {
     return Column(
       children: [
         Text(
-          "Sign Up".toUpperCase(),
-          style: TextStyle(fontWeight: FontWeight.bold),
+          "สมัครสมาชิก".toUpperCase(),
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40 , color: Colors.red),
         ),
         SizedBox(height: defaultPadding),
         Row(
@@ -22,13 +22,15 @@ class SignUpScreenTopImage extends StatelessWidget {
             const Spacer(),
             Expanded(
               flex: 8,
-              child: SvgPicture.asset("assets/icons/signup.svg"),
+              child: Image.asset("assets/images/welcome.jpg"),
             ),
             const Spacer(),
           ],
         ),
         SizedBox(height: defaultPadding),
+        
       ],
+      
     );
   }
 }

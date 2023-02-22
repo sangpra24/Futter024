@@ -6,14 +6,13 @@ import '../../../components/already_have_an_account_acheck.dart';
 import '../../../constants.dart';
 
 
-//เป็นคลาสสำหรับสร้างวิดเจ็ตที่จะไม่เปลี่ยนแปลง เพราะพารามิเตอร์ เป็นkey
+
 class SignUpForm extends StatelessWidget {
   SignUpForm({
     Key? key,
   }) : super(key: key);
 
-//สามบรรทัดนี้เป็นการสร้างออบเจกต์ สามรายการที่ชื่อ emailController, passwordController และ usernameController
-//จะถูกใช้เพื่อป้อนข้อความในช่องข้อความที่เกี่ยวข้องในแอพ
+
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
@@ -31,7 +30,7 @@ class SignUpForm extends StatelessWidget {
             cursorColor: kPrimaryColor,
             onSaved: (email) {},
             decoration:const InputDecoration(
-              hintText: "Your email",
+              hintText: "อีเมล",
               prefixIcon: Padding(
                 padding: const EdgeInsets.all(defaultPadding),
                 child: Icon(Icons.person),
@@ -42,11 +41,11 @@ class SignUpForm extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             child: TextFormField(
               textInputAction: TextInputAction.next,
-              obscureText: true,
+           
               cursorColor: kPrimaryColor,
               controller: usernameController,
               decoration: const InputDecoration(
-                hintText: "Your Username",
+                hintText: "ชื่อผู้ใช้",
                 prefixIcon: Padding(
                   padding: const EdgeInsets.all(defaultPadding),
                   child: Icon(Icons.person),
@@ -62,7 +61,7 @@ class SignUpForm extends StatelessWidget {
               cursorColor: kPrimaryColor,
               controller: passwordController,
               decoration:const InputDecoration(
-                hintText: "Your password",
+                hintText: "รหัสผ่าน",
                 prefixIcon: Padding(
                   padding: const EdgeInsets.all(defaultPadding),
                   child: Icon(Icons.lock),
@@ -71,8 +70,7 @@ class SignUpForm extends StatelessWidget {
             ),
           ),
 
-          // เป็นการเช็คค่า ตรวจสอบว่าผู้ใช้ป้อนข้อความใดๆ ในช่อง emailController, usernameController, 
-          // และpasswordController หรือไม่ถ้ามีก็จะเรียกใช้ signup ฟังก์ชันจากServiceAPI
+          
           const SizedBox(height: defaultPadding / 2),
           ElevatedButton(
             onPressed: () {
@@ -84,7 +82,7 @@ class SignUpForm extends StatelessWidget {
                     ?.then((value) => Navigator.pop(context));
               }
             },
-            child: Text("Sign Up".toUpperCase()),
+            child: Text("สมัครสมาชิก".toUpperCase()),
           ),
           const SizedBox(height: defaultPadding),
           AlreadyHaveAnAccountCheck(
@@ -94,7 +92,7 @@ class SignUpForm extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) {
-                    return LoginScreen();//เป็นคลาสเมื่อ sign up เสร็จเเล้วผู้ใช้ไปยังหน้าใหม่ ก็คือไฟล์ LoginScreen
+                    return LoginScreen();
                   },
                 ),
               );

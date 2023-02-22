@@ -69,7 +69,7 @@ class _LoginFormState extends State<LoginForm> {
             cursorColor: kPrimaryColor,
             onSaved: (email) {},
             decoration: const InputDecoration(
-              hintText: "Your username",
+              hintText: "ชื่อผู้ใช้",
               prefixIcon: Padding(
                 padding: const EdgeInsets.all(defaultPadding),
                 child: Icon(Icons.person),
@@ -89,7 +89,7 @@ class _LoginFormState extends State<LoginForm> {
                 }
               }),
               decoration: const InputDecoration(
-                hintText: "Your password",
+                hintText: "รหัสผ่าน",
                 prefixIcon: Padding(
                   padding: const EdgeInsets.all(defaultPadding),
                   child: Icon(Icons.lock),
@@ -103,7 +103,7 @@ class _LoginFormState extends State<LoginForm> {
             child: ElevatedButton(
               onPressed: () => doLogin(),
               child: Text(
-                "Login".toUpperCase(),
+                "เข้าสู่ระบบ".toUpperCase(),
               ),
             ),
           ),
