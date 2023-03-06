@@ -26,7 +26,9 @@ class SignUpScreen extends StatelessWidget {
                   children: [
                     SizedBox(
                       width: 450,
-                      child: SignUpForm(),
+                      child: SignUpForm(
+                        obj: "",
+                      ),
                     ),
                     SizedBox(height: defaultPadding / 2),
                     // SocalSignUp()
@@ -57,7 +59,9 @@ class MobileSignupScreen extends StatelessWidget {
             const Spacer(),
             Expanded(
               flex: 8,
-              child: SignUpForm(),
+              child: SignUpForm(
+                obj: "",
+              ),
             ),
             const Spacer(),
           ],
